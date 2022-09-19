@@ -1,0 +1,28 @@
+# pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+ name: foo
+ labels:
+   app: foo
+   type: demo
+spec:
+ containers:
+   - name: foo
+     image: c1495616jerry/foo
+     ports:
+       - containerPort: 8080
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: boo
+  labels:
+    app: boo
+    type: demo
+spec:
+  containers:
+    - name: boo
+      image: c1495616jerry/boo
+      ports:
+        - containerPort: 8080
